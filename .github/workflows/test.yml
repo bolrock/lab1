@@ -4,9 +4,10 @@ on: push
 
 jobs:
 
-  my-job:
-    runs-on: ubuntu-latest
+  traefik:
+    runs-on: debian-latest
     steps:
       - name: my-step
         run: echo "Hello World!"
-        
+      - name: docker
+        run: docker ps -a
